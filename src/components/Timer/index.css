@@ -1,0 +1,43 @@
+.timer-container {
+  padding: 14px 20px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.timer-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.timer-label {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #475569;
+}
+
+.timer-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+  font-family: monospace, sans-serif;
+}
+
+/* Urgent red text */
+.timer-container.urgent {
+  border-color: #dc2626;
+  background-color: #fef2f2;
+}
+
+.timer-container.urgent .timer-label {
+  color: #dc2626;
+}
+
+.timer-container.urgent .timer-value {
+  color: #dc2626;
+}

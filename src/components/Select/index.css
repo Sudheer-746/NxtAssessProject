@@ -1,0 +1,21 @@
+.select-dropdown-container {
+  width: 100%;
+  max-width: 320px;
+  margin-top: 6px;
+}
+
+.custom-select-element {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: #1e293b;
+  background-color: #ffffff;
+  cursor: pointer;
+  outline: none;
+}
+
+.custom-select-element:focus {
+  border-color: #1a73e8;
+}
