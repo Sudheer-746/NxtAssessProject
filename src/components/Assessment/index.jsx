@@ -64,17 +64,14 @@ const Assessment = () => {
     if (apiStatus === apiStatusConstants.success) {
       intervalId = setInterval(() => {
         setTimeLeft((prev) => {
-          if (prev <= 1) {
-            clearInterval(intervalId)
+          if (prev <= 0) {
             return 0
           }
           return prev - 1
         })
       }, 1000)
     }
-    return () => {
-      if (intervalId) clearInterval(intervalId)
-    }
+    return () => clearInterval(intervalId)
   }, [apiStatus])
 
   // Helper score calculator
@@ -123,7 +120,7 @@ const Assessment = () => {
       if (response.ok === true) {
         const fetchedQuestions = data.questions
         setQuestionsList(fetchedQuestions)
-        setTotalQuestions(data.total)
+        setTotalQuestions(data.total !== undefined ? data.total : fetchedQuestions.length)
         setSelectedAnswers({})
         setApiStatus(apiStatusConstants.success)
       } else {

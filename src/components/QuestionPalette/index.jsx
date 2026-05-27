@@ -46,7 +46,7 @@ const QuestionPalette = (props) => {
       </div>
       <hr className="palette-divider" />
       <div className="palette-grid-section">
-        <h1 className="palette-grid-title-main">Questions ({total})</h1>
+        <h1 className="palette-grid-title-main">{`Questions (${total})`}</h1>
         <h3 className="palette-grid-title">Question Palette</h3>
         <ul className="numbers-grid">{renderNumberItems()}</ul>
       </div>
