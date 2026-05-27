@@ -22,7 +22,7 @@ const Timer = (props) => {
   return (
     <div className={`timer-container glass-panel ${urgentClass}`}>
       <div className="timer-header">
-        <p className="timer-label">Time Left</p>
+        <span className="timer-label">Time Left</span>
       </div>
       <div className="timer-display-box">
         <p className="timer-value">{formatTime(timeLeft)}</p>
